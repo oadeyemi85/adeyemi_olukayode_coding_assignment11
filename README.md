@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Assignment 11: Dockerized React Development Environment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the complete source code, Docker configuration, and documentation for setting up a containerized React development environment for **Assignment 11**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 1. Project Overview & Learning Outcomes
 
-### `npm start`
+The objective of this assignment is to configure and containerize a React web application using Docker to establish a consistent, risk-mitigated development environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Key Features & Requirements
+* **Application Output:** Displays an `<h1>` heading with the exact text **"Codin 1"**.
+* **Container Name:** `adeyemi_olukayode_coding_assignment11`
+* **Container Working Directory (WORKDIR):** `/adeyemi_olukayode_site`
+* **Port Mapping:** Hosted on `localhost:7775` (host port `7775` mapped to container port `7775`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 2. Step-by-Step Creation & Setup Documentation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Below is the complete step-by-step process followed to construct and deploy this project from scratch:
 
-### `npm run build`
+### Step 2.1: Initializing the React Application
+1. Used `npx create-react-app my-app` to scaffold a new React application using the standard Create React App toolchain.
+2. Navigated into the project directory using `cd my-app`.
+3. Opened the project in Visual Studio Code (`code .`).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 2.2: Updating the Core Component (`src/App.js`)
+Replaced the default Create React App boilerplate in `src/App.js` with the required HTML heading:
+```jsx
+import React from 'react';
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+function App() {
+  return (
+    <div className="App">
+      <h1>Codin 1</h1>
+    </div>
+  );
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default App;
