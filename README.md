@@ -21,7 +21,7 @@ The objective of this assignment is to configure and containerize a React web ap
 Below is the complete step-by-step process followed to construct and deploy this project from scratch:
 
 ### Step 2.1: Initializing the React Application
-1. Used `npx create-react-app my-app` to scaffold a new React application using the standard Create React App toolchain.
+1. Used `npx create-react-app my-app` to create a new React application using the standard Create React App setup.
 2. Navigated into the project directory using `cd my-app`.
 3. Opened the project in Visual Studio Code (`code .`).
 
